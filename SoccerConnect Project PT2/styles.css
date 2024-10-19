@@ -1,0 +1,121 @@
+/* Base styles for the website */
+body {
+    font-family: Arial, sans-serif; /* Font family for the entire page */
+    line-height: 1.6; /* Line height for readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Header styles */
+header {
+    background: #007bff; /* Blue background for header */
+    color: white; /* White text color */
+    padding: 10px 0; /* Padding for the header */
+    text-align: center; /* Centered text in the header */
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none; /* No bullet points for list */
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    display: inline; /* Display list items inline */
+    margin: 0 15px; /* Margin between list items */
+}
+
+nav a {
+    color: white; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Main content styles */
+main {
+    padding: 20px; /* Padding around main content */
+}
+
+/* Team and player list styles */
+.team-list, .player-list {
+    padding: 0; /* Remove default padding */
+    list-style: none; /* No bullet points for lists */
+}
+
+.team-list li, .player-list li {
+    margin: 10px 0; /* Margin between list items */
+}
+
+/* Image styles */
+.featured-image {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.team-image {
+    max-width: 200px; /* Set max width for team images */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Block level for proper spacing */
+    margin-top: 10px; /* Spacing above the image */
+}
+
+/* Player image styles */
+.player-image {
+    max-width: 150px; /* Set max width for player images */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Block level for proper spacing */
+    margin-top: 10px; /* Spacing above the image */
+}
+
+/* Contact image styles */
+.contact-image {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 20px; /* Margin above the image */
+}
+
+/* Footer styles */
+footer {
+    background: #333; /* Dark background for footer */
+    color: white; /* White text color */
+    text-align: center; /* Centered text in the footer */
+    padding: 10px 0; /* Padding for the footer */
+    position: relative; /* Positioning for footer */
+    bottom: 0; /* Align to bottom */
+    width: 100%; /* Full width for footer */
+}
+
+footer a {
+    color: white; /* White text color for footer links */
+    text-decoration: underline; /* Underline for footer links */
+}
+
+/* Flexbox layout for fluid design */
+main {
+    display: flex; /* Flexbox for main content */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+}
+
+/* Input and text area styling */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 80%; /* Set width for inputs */
+    padding: 10px; /* Padding for inputs */
+    margin: 5px 0 15px 0; /* Margin around inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+input[type="submit"] {
+    background-color: #007bff; /* Blue background for button */
+    color: white; /* White text color */
+    padding: 10px 15px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

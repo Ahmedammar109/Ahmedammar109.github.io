@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+    <title>SoccerConnect - Home</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>SoccerConnect</h1>
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li> <!-- Link to Home Page -->
+                <li><a href="teams.html">Teams</a></li> <!-- Link to Teams Page -->
+                <li><a href="players.html">Players</a></li> <!-- Link to Players Page -->
+                <li><a href="contact.html">Contact</a></li> <!-- Link to Contact Page -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Section: Featured News -->
+        <section>
+            <h2>Featured News</h2>
+            
+            <!-- Article: Upcoming Matches -->
+            <article>
+                <h3>Upcoming Matches</h3>
+                <!-- Dynamic content area updated by AJAX -->
+                <div id="matches-info">Loading upcoming matches...</div>
+                <img src="https://s3.amazonaws.com/thumbnails.venngage.com/template/39ca5949-9d3b-4937-9979-06303e26c835.png" alt="Upcoming Matches" class="featured-image">
+            </article>
+            
+            <!-- Article: Player Spotlight -->
+            <article>
+                <h3>Player Spotlight</h3>
+                <p>Check out our featured player of the week!</p>
+                <img src="http://getwallpapers.com/wallpaper/full/f/1/8/651964.jpg" alt="Player Spotlight" class="featured-image">
+            </article>
+            
+            <!-- Article: Season Highlights -->
+            <article>
+                <h3>Season Highlights</h3>
+                <p>Review the best moments from the current season. From incredible goals to unforgettable saves, this season has it all!</p>
+                <img src="https://i.ytimg.com/vi/dquLv6dx_qo/maxresdefault.jpg" alt="Season Highlights" class="featured-image">
+            </article>
+        </section>
+
+        <!-- Slideshow Section -->
+        <div class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-speed="200" data-cycle-timeout="2000">
+            <img src="https://s3.amazonaws.com/thumbnails.venngage.com/template/39ca5949-9d3b-4937-9979-06303e26c835.png" alt="Slide 1">
+            <img src="http://getwallpapers.com/wallpaper/full/f/1/8/651964.jpg" alt="Slide 2">
+            <img src="https://i.ytimg.com/vi/dquLv6dx_qo/maxresdefault.jpg" alt="Slide 3">
+        </div>
+    </main>
+
+    <!-- Script Files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!-- jQuery library -->
+    <script src="https://malsup.github.io/jquery.cycle2.js"></script> <!-- jQuery Cycle2 plugin for the slideshow -->
+    <script src="scripts.js"></script> <!-- Link to the external JavaScript file -->
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 SoccerConnect</p>
+        <!-- Links for Validation -->
+        <a href="https://validator.w3.org/check?uri=referer" referrerpolicy="unsafe-url">Validate HTML</a><br>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer" referrerpolicy="unsafe-url">Validate CSS</a>
+    </footer>
+</body>
+</html>

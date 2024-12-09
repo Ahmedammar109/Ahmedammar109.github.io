@@ -1,0 +1,157 @@
+/* Base styles for the website */
+body {
+    font-family: Arial, sans-serif; /* Font for the entire website */
+    line-height: 1.6; /* Improve readability */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Header styles */
+header {
+    background: #007bff; /* Blue background */
+    color: white; /* White text color */
+    padding: 10px 0; /* Padding around header */
+    text-align: center; /* Center-align header text */
+}
+
+/* Navigation styles */
+nav ul {
+    list-style: none; /* Remove bullet points from list */
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    display: inline; /* Display items horizontally */
+    margin: 0 15px; /* Space between list items */
+}
+
+nav a {
+    color: white; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+nav a:hover {
+    text-decoration: underline; /* Underline links on hover */
+    color: #ffcc00; /* Change link color on hover */
+}
+
+/* Main content styles */
+main {
+    padding: 20px; /* Space around main content */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align items */
+}
+
+/* List styles for teams and players */
+.team-list, .player-list {
+    padding: 0; /* Remove default padding */
+    list-style: none; /* Remove bullet points */
+}
+
+.team-list li, .player-list li {
+    margin: 10px 0; /* Space between list items */
+}
+
+/* Image styles for teams and players */
+.team-image, .player-image {
+    max-width: 200px; /* Restrict maximum width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Block-level element for proper spacing */
+    margin-top: 10px; /* Add margin above images */
+}
+
+/* Tooltip styles */
+.tooltip {
+    position: absolute; /* Position relative to viewport */
+    background-color: #333; /* Dark background */
+    color: white; /* White text */
+    padding: 5px 10px; /* Padding inside tooltip */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 0.9em; /* Slightly smaller text */
+    z-index: 1000; /* Ensure tooltip is above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+/* Expanded details for teams and players */
+.expanded-details {
+    font-size: 0.85em; /* Slightly smaller text */
+    color: #666; /* Light gray text color */
+    margin-top: 10px; /* Add margin above expanded details */
+}
+
+/* Featured content image styles */
+.featured-image {
+    max-width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Slideshow styles */
+.cycle-slideshow {
+    width: 100%; /* Full width of container */
+    max-width: 600px; /* Restrict maximum width */
+    margin: auto; /* Center-align slideshow */
+}
+
+.cycle-slideshow img {
+    width: 100%; /* Full width for images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Input and textarea styling */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 80%; /* Set input width */
+    padding: 10px; /* Padding inside input fields */
+    margin: 5px 0 15px 0; /* Space around fields */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 15px; /* Padding inside button */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue background on hover */
+}
+
+/* Footer styles */
+footer {
+    background: #333; /* Dark background */
+    color: white; /* White text */
+    text-align: center; /* Center-align footer text */
+    padding: 10px 0; /* Space around footer */
+    position: relative; /* Relative positioning */
+    bottom: 0; /* Align footer to bottom */
+    width: 100%; /* Full width for footer */
+}
+
+/* Footer link styles */
+footer a {
+    color: white; /* White text color */
+    text-decoration: underline; /* Underline links */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block; /* Stack navigation items vertically */
+        margin: 10px 0; /* Space between stacked items */
+    }
+
+    .team-image, .player-image {
+        max-width: 100%; /* Allow images to scale fully */
+    }
+
+    main {
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+}

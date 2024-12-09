@@ -1,0 +1,74 @@
+// Wait until the DOM is fully loaded
+$(document).ready(function() {
+    // AJAX Request: Fetch upcoming matches for the index page
+    if ($('#matches-info').length > 0) {
+        const apiUrl = "https://www.scorebat.com/video-api/v1/";
+
+        $.ajax({
+            url: apiUrl,
+            method: "GET",
+            success: function(data) {
+                const matches = data || [];
+                let matchesHtml = "";
+
+                if (matches.length > 0) {
+                    matches.slice(0, 5).forEach(match => {
+                        if (match.title && match.url) {
+                            matchesHtml += `<p><strong>${match.title}</strong> - <a href="${match.url}" target="_blank">Watch Highlights</a></p>`;
+                        }
+                    });
+                } else {
+                    matchesHtml = "<p>No upcoming matches available.</p>";
+                }
+
+                $("#matches-info").html(matchesHtml);
+            },
+            error: function(xhr, status, error) {
+                console.error("Error fetching match data:", status, error);
+                $("#matches-info").text("Failed to load match data. Please try again later.");
+            }
+        });
+    }
+
+    // Tooltip functionality for player and team images
+    $(".player-image, .team-image").hover(
+        function(event) {
+            const description = $(this).siblings("strong").text(); // Get sibling <strong> text
+            const tooltip = $(`<div class="tooltip">${description}</div>`);
+            $("body").append(tooltip); // Append tooltip to body
+            tooltip.css({
+                top: event.pageY + 10,
+                left: event.pageX + 10
+            });
+        },
+        function() {
+            $(".tooltip").remove(); // Remove tooltip on mouse leave
+        }
+    );
+
+    // Dynamic content highlighting for navigation
+    $("nav a").hover(
+        function() {
+            $(this).css({
+                color: "#ffcc00", // Highlight color
+                fontWeight: "bold"
+            });
+        },
+        function() {
+            $(this).css({
+                color: "white", // Reset to default color
+                fontWeight: "normal"
+            });
+        }
+    );
+
+    // Dynamic expansion of team/player details
+    $(".team-list li, .player-list li").click(function() {
+        const details = $(this).data("details");
+        if (details) {
+            const expanded = $(`<p class="expanded-details">${details}</p>`);
+            $(this).append(expanded);
+            $(this).off("click"); // Disable click to prevent multiple additions
+        }
+    });
+});
